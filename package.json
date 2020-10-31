@@ -1,0 +1,16 @@
+{
+  "name": "ch_machine",
+  "version": "1.0.0",
+  "description": "CH Machine project for operating systems",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ch-maquina",
+    "operating-systems",
+    "universidad-de-caldas"
+  ],
+  "author": "Jose Miguel Ortiz Castrillon",
+  "license": "ISC"
+}
