@@ -32,21 +32,22 @@ export default class Helpers{
 
     //Este metodo organiza cada linea de codigo com un array de palabras
     static async organizeText(file){
-
+        
         let text = await Helpers.readFile(file);
-        //En caso de que no se eliminen completamente los espacios, aplicar trim() antes del split()
-        let lines =  text.split('\n').filter(line => line.length>1);
+        
+        let lines =  text.trim().split('\n').filter(line => line.length>1);
         
         //console.log(lines);
 
         for(let i=0; i<lines.length; i++){
             let line= lines[i];
-            lines[i]= line.split(" ").filter( word => word.length > 1 || word == 'I' || word == 'S');
+            lines[i]= line.trim().split(" ").filter( word => word.length > 1 || word === 'I' || word === 'S');
         }
 
+        let result = lines.filter( array => array.length>0);
         //console.log(lines);
 
-        return lines;
+        return result;
         
     }
     
